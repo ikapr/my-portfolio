@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './NavBar';
-import Header from './header';  // Assuming 'header' is the correct case for your component
+import Header from './Header';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Contact from './Contact';
