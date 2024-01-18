@@ -1,22 +1,23 @@
+import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Header from './Header';
+import Home from './Home';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Contact from './Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
-    <Router>
-      <div>
-        <NavBar /> {/* Include the NavBar component */}
-        <Route path="/" exact component={Header} />
-        <Route path="/about" component={AboutMe} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/contact" component={Contact} />
-      </div>
-    </Router>
+    <div className={`App`}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
